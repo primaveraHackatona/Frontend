@@ -9,7 +9,7 @@ function Login() {
         <Grid container className="background1" >
             <Grid item xs={12} >
                 <Box display="flex" justifyContent="center" alignItems="center" height="80vh" style={{ opacity: 1 }}>
-                    <Box className="cardLogin" marginTop={12} display="flex" justifyContent="center" alignItems="center">
+                    <Box marginTop={12} display="flex" justifyContent="center" alignItems="center">
                         <Box marginY={2}>
                             <h1 className="textoLogin" >
                                 Login
@@ -22,7 +22,7 @@ function Login() {
                                     <TextField  id="senha" label="senha" variant="outlined" name="senha" type='password' fullWidth />
                                 </Box >
                                 <Box marginLeft={11}>
-                                    <Button type="submit" variant="contained" color="secondary" className="botao1 btn-grad">
+                                    <Button type="submit" variant="contained" color="secondary" className="botaoLogin">
                                         Login
                                     </Button>
                                 </Box>

@@ -1,0 +1,19 @@
+.botaoCadastro {
+    border-color: white !important;
+    background-color: #F26B9C !important;
+    color: white !important;
+    margin-left: 4px !important;
+}
+
+.botaoCancelar {
+    border-color: white !important;
+    background-color: #8CC2BD !important;
+    color: white !important;
+    margin-left: 4px !important;
+}
+
+.txtCadastro {
+    color: #A6A6A6;
+    font-weight: bold !important;
+    text-align: center !important;
+}

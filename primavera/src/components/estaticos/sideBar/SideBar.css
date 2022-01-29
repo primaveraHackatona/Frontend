@@ -1,0 +1,23 @@
+.barra {
+    padding: 16px;
+    width: 250px;
+    position: fixed;
+    color: #9CD9D3 !important;
+    margin-right: 16px;
+    background-color: #9CD9D3 !important;
+    min-height: 50vw !important;
+}
+
+.btn {
+    color: #ff0064;
+    width: 100%;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.margin {
+    margin: 10px, 10px;
+    color: #fff !important;
+}

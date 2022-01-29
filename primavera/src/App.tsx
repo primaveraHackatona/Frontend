@@ -6,6 +6,7 @@ import Login from './pages/login/Login';
 import Home from './pages/home/Home';
 import Footer from './components/estaticos/footer/Footer';
 import CadastroUsuaria from './pages/cadastroUsuaria/CadastroUsuaria';
+import Feed from './pages/feed/Feed';
 
 function App() {
   return (
@@ -28,7 +29,11 @@ function App() {
 
           <Route path='/cadastroUsuaria'>
             <CadastroUsuaria />
-          </Route>       
+          </Route> 
+
+          <Route path='/feed'>
+            <Feed />
+          </Route>      
 
         </Switch>
         <Footer />

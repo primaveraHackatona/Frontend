@@ -6,9 +6,9 @@ function Home() {
     return (
 
         <>
-            <Grid container>
-                <Box display="flex" justifyContent="center" alignItems="center">
-                    <Typography variant="h1" color="initial">Bem vinda ao Primavera!</Typography>
+            <Grid container justifyContent="center">
+                <Box justifyContent="center" alignItems="center" paddingTop={7} >
+                    <Typography variant="h2" color="initial" className="titulo">Bem vinda ao Primavera!</Typography>
                 </Box>
             </Grid>
         </>

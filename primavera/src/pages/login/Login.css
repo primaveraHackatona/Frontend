@@ -1,9 +1,16 @@
 .textoLogin {
-    color: rgba(31, 25, 25, 0.815);
+    color: #A6A6A6;
     font-weight: bold !important;
     text-align: center !important;
 }
 
 .txt {
     color: black;
+}
+
+.botaoLogin {
+    border-color: white !important;
+    background-color: #F26B9C !important;
+    color: white !important;
+    margin-left: 4px !important;
 }

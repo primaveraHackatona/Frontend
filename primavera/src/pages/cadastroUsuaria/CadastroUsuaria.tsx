@@ -4,14 +4,15 @@ import { Link } from 'react-router-dom';
 import './CadastroUsuaria.css';
 
 function CadastroUsuaria() {
+    
     return (
         <>
-            <Grid container className="background1" >
+            <Grid container justifyContent='center' >
             <Grid item xs={12} >
-                <Box display="flex" justifyContent="center" alignItems="center" height="80vh" style={{ opacity: 1 }}>
-                    <Box className="cardCadastro" marginTop={12} paddingLeft={4} paddingRight={4} justifyContent="center" alignItems="center">
-                        <Box marginY={2}>
-                            <h1 className="textoCadastro">
+                <Box display="flex" justifyContent="center" alignItems="center" style={{ opacity: 1 }}>
+                    <Box marginTop={12} paddingLeft={4} paddingRight={4} justifyContent="center" alignItems="center">
+                        <Box marginY={6}>
+                            <h1 className="txtCadastro" >
                                 Cadastro
                             </ h1>
                             <form >
@@ -32,11 +33,11 @@ function CadastroUsuaria() {
                                 </Box >
                                 <Box display='flex' justifyContent='center' marginTop={2} textAlign='center'>
                                     <Link to='/login' className='text-decorator-none'>
-                                        <Button variant='contained' className='btnCancelar'>
+                                        <Button variant='contained' className='botaoCancelar'>
                                             Cancelar
                                         </Button>
                                     </Link>
-                                    <Button type='submit' variant='contained' className='botao1'>
+                                    <Button type='submit' variant='contained' className='botaoCadastro'>
                                         Cadastrar
                                     </Button>
                                 </Box>
