@@ -1,11 +1,20 @@
 import React from 'react'
-import { CardHeader, CardContent, CardActions, Typography, Card, Avatar, IconButton} from '@material-ui/core';
+import { CardHeader, CardContent, CardActions, Typography, Card, Avatar, IconButton, Button, Link } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import BookmarkIcon from '@material-ui/icons/Bookmark';
 import MessageIcon from '@material-ui/icons/Message';
 import './PostCard.css';
+import { useHistory } from 'react-router-dom';
 
 function PostCard() {
+
+    let history = useHistory();
+
+    const handleMouseEvent = (e: MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        history.push("/chat")
+      };
+
     return (
         <Card className='card'>
 
@@ -36,6 +45,9 @@ function PostCard() {
                 </Typography>
             </CardContent>
             <CardActions disableSpacing>
+            <Button onClick={handleMouseEvent} variant='contained' className='botaoCadastro'>
+                    Fale Comigo!
+            </Button>
                 <IconButton aria-label='Like'>
                     <FavoriteIcon />
                     <Typography style={{ cursor: 'pointer' }}

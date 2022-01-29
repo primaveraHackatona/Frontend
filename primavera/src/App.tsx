@@ -7,6 +7,7 @@ import Home from './pages/home/Home';
 import Footer from './components/estaticos/footer/Footer';
 import CadastroUsuaria from './pages/cadastroUsuaria/CadastroUsuaria';
 import Feed from './pages/feed/Feed';
+import ChatPage from './chatprimavera/pages/chat';
 
 function App() {
   return (
@@ -33,6 +34,10 @@ function App() {
 
           <Route path='/feed'>
             <Feed />
+          </Route>
+
+          <Route path='/chat'>
+            <ChatPage />
           </Route>      
 
         </Switch>
