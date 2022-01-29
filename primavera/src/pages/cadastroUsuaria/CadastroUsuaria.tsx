@@ -2,6 +2,7 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Grid, Box, Typography, Button, TextField } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom';
 import './CadastroUsuaria.css';
+import { cadastroUsuario } from '../../services/Service';
 import User from '../../models/User';
 
 function CadastroUsuaria() {
@@ -55,7 +56,7 @@ function CadastroUsuaria() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         if (confirmarSenha === user.senha) {
-            CadastroUsuaria(`/usuarios/cadastrar`, user, setUserResult)
+            cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
             alert('Usuario cadastrado com sucesso')
         } else {
             alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
@@ -73,18 +74,19 @@ function CadastroUsuaria() {
                                     Cadastro
                                 </ h1>
                                 <form onSubmit={onSubmit}>
-                                    <Typography variant='h5' gutterBottom color='textPrimary' component='h3' align='left'>Informações básicas</Typography>
-                                    <TextField value={user.nomeCompleto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='standard' name='nome' margin='normal' fullWidth />
+                                    <TextField value={user.nomeCompleto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nomeCompleto' label='Nome' variant='standard' name='nomeCompleto' margin='normal' fullWidth />
                                     <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant='standard' name='usuario' margin='normal' fullWidth />
+                                    <TextField value={user.endereco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='endereco' label='Endereço' variant='standard' name='endereco' margin='normal' fullWidth />
+                                    <TextField value={user.bio} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='bio' label='Bio' variant='standard' name='bio' margin='normal' fullWidth />
                                     <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='standard' name='senha' margin='normal' type='password' fullWidth />
                                     <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirmar Senha' variant='standard' name='confirmarSenha' margin='normal' type='password' fullWidth />
                                     <Box display='flex' justifyContent='center' marginTop={2} textAlign='center'>
                                         <Link to='/login' className='text-decorator-none'>
-                                            <Button variant='contained' className='btnCancelar'>
+                                            <Button variant='contained' className='botaoCadastro'>
                                                 Cancelar
                                             </Button>
                                         </Link>
-                                        <Button type='submit' variant='contained' className='botao1'>
+                                        <Button type='submit' variant='contained' className='botaoCancelar '>
                                             Cadastrar
                                         </Button>
                                     </Box>
