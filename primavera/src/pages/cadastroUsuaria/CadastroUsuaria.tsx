@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Grid, Box, Typography, Button, TextField } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom';
 import './CadastroUsuaria.css';
@@ -11,17 +11,25 @@ function CadastroUsuaria() {
     const [user, setUser] = useState<User>(
         {
             id: 0,
-            nome: '',
-            usuario: '',
-            senha: ''
+            bio: '',
+            endereco: '',
+            foto: '',
+            nomeCompleto: '',
+            senha: '',
+            tipo: '',
+            usuario: ''
         })
 
     const [userResult, setUserResult] = useState<User>(
         {
             id: 0,
-            nome: '',
-            usuario: '',
-            senha: ''
+            bio: '',
+            foto: '',
+            endereco: '',
+            nomeCompleto: '',
+            senha: '',
+            tipo: '',
+            usuario: ''
         })
 
     useEffect(() => {
@@ -64,29 +72,19 @@ function CadastroUsuaria() {
                                 <h1 className="txtCadastro" >
                                     Cadastro
                                 </ h1>
-                                <form >
-                                    <Box >
-                                        <TextField id='nome' label='Nome' variant='standard' name='nome' margin='normal' fullWidth />
-                                    </Box>
-                                    <Box  >
-                                        <TextField id='usuario' label='Usuário' variant='standard' name='usuario' margin='normal' fullWidth />
-                                    </Box >
-                                    <Box  >
-                                        <TextField id='fotoPerfil' label='url: Foto Perfil' variant='standard' name='fotoPerfil' margin='normal' fullWidth />
-                                    </Box >
-                                    <Box >
-                                        <TextField id='senha' label='Senha' variant='standard' name='senha' margin='normal' type='password' fullWidth />
-                                    </Box >
-                                    <Box  >
-                                        <TextField id='confirmarSenha' label='Confirmar Senha' variant='standard' name='confirmarSenha' margin='normal' type='password' fullWidth />
-                                    </Box >
+                                <form onSubmit={onSubmit}>
+                                    <Typography variant='h5' gutterBottom color='textPrimary' component='h3' align='left'>Informações básicas</Typography>
+                                    <TextField value={user.nomeCompleto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='standard' name='nome' margin='normal' fullWidth />
+                                    <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant='standard' name='usuario' margin='normal' fullWidth />
+                                    <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='standard' name='senha' margin='normal' type='password' fullWidth />
+                                    <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirmar Senha' variant='standard' name='confirmarSenha' margin='normal' type='password' fullWidth />
                                     <Box display='flex' justifyContent='center' marginTop={2} textAlign='center'>
                                         <Link to='/login' className='text-decorator-none'>
-                                            <Button variant='contained' className='botaoCancelar'>
+                                            <Button variant='contained' className='btnCancelar'>
                                                 Cancelar
                                             </Button>
                                         </Link>
-                                        <Button type='submit' variant='contained' className='botaoCadastro'>
+                                        <Button type='submit' variant='contained' className='botao1'>
                                             Cadastrar
                                         </Button>
                                     </Box>

@@ -1,8 +1,12 @@
 interface User {
     id: number;
-    nome: string;
-    usuario: string;
+    bio: string;
+    endereco: string;
+    foto:	string;
+    nomeCompleto: string;
     senha: string;
+    tipo: string;
+    usuario: string;
 }
 
 export default User;
