@@ -1,0 +1,16 @@
+    .text-decorator-none {
+        text-decoration: none;
+        color: white;
+    }
+    
+    #navegacao {
+        background-color: #F26B9C !important;
+    }
+    
+    .alinhamento {
+        align-items: center;
+    }
+    
+    .cursor {
+        cursor: pointer;
+    }

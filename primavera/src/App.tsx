@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Navbar from './components/estaticos/navbar/Navbar';
-import Home from './pages/home/Home';
 import Login from './pages/login/Login';
+import Home from './pages/home/Home';
 import Footer from './components/estaticos/footer/Footer';
 import CadastroUsuaria from './pages/cadastroUsuaria/CadastroUsuaria';
 
