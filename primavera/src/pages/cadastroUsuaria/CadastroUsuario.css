@@ -25,3 +25,11 @@
 .transitionSize:hover {
     transform: scale(1.1);
 }
+
+.bottom {
+    bottom: 200px!important;
+}
+
+.altura {
+    height: 125vh;
+}

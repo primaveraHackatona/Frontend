@@ -90,7 +90,7 @@ function CadastroUsuario() {
         }
     }
     return (
-        <Grid container >
+        <Grid container className='altura' >
             <Container maxWidth="xs">
                 <Grid item xs={12} >
                     <Box display="flex" justifyContent="center" alignItems="center" height="80vh" style={{ opacity: 1 }}>
