@@ -5,12 +5,23 @@
 }
 
 .txt {
-    color: black;
+    color: #F26B9C;
+}
+
+.txt:hover {
+    color: #9CD9D3;
 }
 
 .botaoLogin {
     border-color: white !important;
     background-color: #F26B9C !important;
     color: white !important;
+    margin-left: 4px !important;
+}
+
+.botaoLogin:hover {
+    border-color: #000000 !important;
+    background-color: #F26B9C !important;
+    color: #000000 !important;
     margin-left: 4px !important;
 }
