@@ -101,7 +101,7 @@ function Login() {
                         <Box marginTop={12} display="flex" justifyContent="center" alignItems="center">
                             <Box marginY={2}>
                                 <h1 className="textoLogin" >
-                                    Login
+                                    LOGIN
                                 </h1>
                                 <form onSubmit={onSubmit}>
                                     <Box marginY={4}>
@@ -111,7 +111,7 @@ function Login() {
                                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="senha" label="senha" variant="outlined" name="senha" type='password' fullWidth />
                                     </Box >
                                     <Box marginLeft={11}>
-                                        <Button type="submit" variant="contained" color="secondary" className="botao1 btn-grad">
+                                        <Button type="submit" variant="contained" color="secondary" className="botaoLogin">
                                             Login
                                         </Button>
                                     </Box>

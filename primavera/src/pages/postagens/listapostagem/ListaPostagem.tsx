@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import Postagem from '../../../models/Postagem';
 import { busca } from "../../../services/Service";
-import { Box, Card, Grid, Container, CardActions, CardContent, Button, Typography, Avatar } from '@material-ui/core';
+import { Box, Card, Container, CardActions, CardContent, Button, Typography, Avatar, IconButton } from '@material-ui/core';
 import './ListaPostagem.css';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { UserState } from '../../../store/user/userReducer';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import BookmarkIcon from '@material-ui/icons/Bookmark';
+import MessageIcon from '@material-ui/icons/Message';
 
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([])
@@ -107,16 +110,33 @@ function ListaPostagem() {
                       </Typography>
                       <Box paddingTop={1}>
                         <Typography className='espaco-letras fonte-contato'>
-                          Quer falar comigo? Clique no botão 
+                          Quer falar comigo? Clique no botão
                         </Typography>
                       </Box>
-                      <Box  paddingTop={1}>
+                      <Box paddingTop={1}>
                         <Link to={'/chat'} className='text-decorator-none'>
                           <Button variant='contained' className='btn-atualizar-post' >
                             Chat
                           </Button>
                         </Link>
                       </Box>
+                      <IconButton aria-label='Like'>
+                        <FavoriteIcon />
+                        <Typography style={{ cursor: 'pointer' }}
+                          color='textSecondary'
+                          variant='body2'
+                        >{'10'}</Typography>
+                      </IconButton>
+                      <IconButton aria-label='Comentario'>
+                        <MessageIcon />
+                        <Typography style={{ cursor: 'pointer' }}
+                          color='textSecondary'
+                          variant='body2'
+                        >{'10'}</Typography>
+                      </IconButton>
+                      <IconButton>
+                        <BookmarkIcon />
+                      </IconButton>
                     </CardContent>
                   </Box>
                   <Box display="flex" justifyContent="center">
