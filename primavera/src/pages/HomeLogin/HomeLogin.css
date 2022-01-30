@@ -1,0 +1,43 @@
+.bg-home-login{
+    background-color: rgba(17, 0, 255, 0.034);
+}
+.alinharCards{
+    display: flex;
+    flex-direction: row;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: initial;
+}
+.cardEstilo{
+    align-items: center;
+}
+.textoPerfil{
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif!important;
+    color: #505050;
+}
+.text-decorator-none{
+    text-decoration: none;
+}
+.fotoPerfil{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+.alinharItens{
+    display: flex;
+    justify-content: space-between !important;
+    
+}
+.btnPostagens{
+    border-radius: 6px!important;
+    background-color: white!important;
+    border: 1px solid #A6A6A6!important;
+    color: #F26B9C!important;
+    font-weight: bold!important;
+    height: 50px;
+    width: 150px;
+}

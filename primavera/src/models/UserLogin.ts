@@ -1,13 +1,13 @@
 interface UserLogin {
     id: number;
+    nomeCompleto: string;
+    usuario: string;
+    tipo: string;
+    foto: string;
+    senha: string;
+    token: string;
     bio: string;
     endereco: string;
-    foto:	string;
-    nomeCompleto: string;
-    senha:	string;
-    tipo: string;
-    token: string;
-    usuario: string;
 }
 
 export default UserLogin;
