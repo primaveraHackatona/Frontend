@@ -3,10 +3,6 @@
         color: white;
     }
     
-    #navegacao {
-        background-color: #F26B9C !important;
-    }
-    
     .alinhamento {
         align-items: center;
     }
@@ -18,4 +14,23 @@
     .logo {
         border-radius: 50%;
         height: 40px;
+    }
+    .cursor{
+        cursor: pointer;
+        color: white;
+    }
+    
+    .text-decorator-none{
+        text-decoration: none;
+       
+    }
+    .btn-cadastre-se{
+        text-decoration: none!important;
+        border-color: #fafafa!important;
+        background: #fafafa!important;
+        color: #F26B9C!important;
+    }
+    .avatar {
+        width: 35px!important;
+        height: 35px!important;
     }

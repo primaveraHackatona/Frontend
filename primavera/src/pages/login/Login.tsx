@@ -5,46 +5,91 @@ import './Login.css'
 import useLocalStorage from "react-use-localstorage";
 import UserLogin from "../../models/UserLogin";
 import { login } from "../../services/Service";
+import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
+import { addName, addTipo, addToken, addFoto, addId, addEndereco, addBio } from '../../../src/store/user/actions';
 
 function Login() {
-
     let history = useHistory();
-    const [token, setToken] = useLocalStorage('token');
+    const dispatch = useDispatch();
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
-            bio: '',
-            endereco: '',
-            foto: '',
             nomeCompleto: '',
-            senha: '',
+            usuario: '',
             tipo: '',
+            foto: '',
+            senha: '',
             token: '',
-            usuario: ''
+            bio: '',
+            endereco: ''
+        }
+    )
+
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>(
+        {
+            id: 0,
+            nomeCompleto: '',
+            usuario: '',
+            tipo: '',
+            foto: '',
+            senha: '',
+            token: '',
+            bio: '',
+            endereco: ''
         }
     )
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+
         setUserLogin({
             ...userLogin,
             [e.target.name]: e.target.value
         })
     }
 
+
+
     useEffect(() => {
-        if (token !== '') {
-            history.push('/feed')
+
+        if (respUserLogin.token != '') {
+            dispatch(addToken(respUserLogin.token));
+            dispatch(addName(respUserLogin.nomeCompleto));
+            dispatch(addFoto(respUserLogin.foto));
+            dispatch(addTipo(respUserLogin.tipo));
+            dispatch(addId(respUserLogin.id));
+            dispatch(addBio(respUserLogin.bio));
+            dispatch(addEndereco(respUserLogin.endereco));
+            history.push('/homelogin')
         }
-    }, [token])
+    }, [respUserLogin.token])
+
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login(`/usuarios/logar`, userLogin, setToken)
-
-            alert('Usuário logado com sucesso!')
+            await login(`/usuarios/logar`, userLogin, setRespUserLogin)
+            toast.success('Usuário logado com sucesso!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         } catch (error) {
-            alert('Dados do usuário inconsistentes. Erro ao logar!')
+            toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         }
     }
 
@@ -75,7 +120,7 @@ function Login() {
                                     <Box marginRight={1}>
                                         <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                                     </Box>
-                                    <Link to='/cadastroUsuaria' className='text-decorator-none'>
+                                    <Link to='/cadastrar' className='text-decorator-none'>
                                         <Typography variant="subtitle1" gutterBottom align='center' className='txt' >Cadastre-se</Typography>
                                     </Link>
                                 </Box>
