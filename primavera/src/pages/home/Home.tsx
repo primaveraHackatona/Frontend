@@ -12,9 +12,11 @@ function SobreNos() {
             <Grid>
                 <Grid xs={12}  >
                     <Grid container justifyContent="center">
-                        <Grid item xs={6}>
-                            <Box paddingTop={10}>
+                        <Grid item xs={12}>
+                            <Box paddingTop={10} alignItems= 'center'>
+                                <Box display='flex' alignItems='center' justifyContent='center' >
                                 <img src="https://i.imgur.com/dBhQmlU.png" alt="logo primavera" className='logoSobre' />
+                                </Box>
                             </Box>
                         </Grid>
                     </Grid>
@@ -116,15 +118,15 @@ function SobreNos() {
                                     Desenvolvedora Full Stack 
                                 </Typography>
                                 <Typography align='center'>
-                                    FUNÇÃO 2
+                                    Ciências e Humanidades
                                 </Typography>
                             </Box>
                         <Box alignItems="center" justifyContent="center"  className='box-icones' >
                             <a href=" https://github.com/julianacsmacedo" target="_blank">
-                                <GitHubIcon style={{ fontSize: 50, color: "#f99e29" }} />
+                                <GitHubIcon className='iconeGithub' />
                             </a>
                             <a href=" https://www.linkedin.com/in/juliana-cs-macedo/" target="_blank">
-                                <LinkedInIcon style={{ fontSize: 60, color: "#f99e29" }} />
+                                <LinkedInIcon className='iconeLinkedin' />
                             </a>
                         </Box>
                     
@@ -149,16 +151,16 @@ function SobreNos() {
                         <Box display="flex" alignItems="center" justifyContent="center" className='box-icones' >
 
                             <a href="https://github.com/mcsnsx" target="_blank">
-                                <GitHubIcon style={{ fontSize: 50, color: "#f99e29" }} />
+                                <GitHubIcon className='iconeGithub' />
                             </a>
                             <a href="https://www.linkedin.com/in/maria-carolina-s-n-xavier-05340b191/" target="_blank">
-                                <LinkedInIcon style={{ fontSize: 60, color: "#f99e29" }} />
+                                <LinkedInIcon className='iconeLinkedin' />
                             </a>
                         </Box>
                     </Box>
                     <Box>
                         <Box>
-                        <img className='box-fotos' src="https://i.imgur.com/qukKYZm.jpg" alt="Dev Talita" />
+                        <img className='box-fotos' src="https://i.imgur.com/u8VuNA2.jpg" alt="Dev Talita" />
                         </Box>
 
                         <Box >
@@ -169,24 +171,24 @@ function SobreNos() {
                                     Desenvolvedor Full Stack 
                                 </Typography>
                                 <Typography align='center'>
-                                    FUNÇÃO 2
+                                    Web Design
                                 </Typography>
                             </Box>
 
                         <Box display="flex" alignItems="center" justifyContent="center" className='box-icones'>
 
                             <a href=" https://github.com/talitarribeiro" target="_blank">
-                                <GitHubIcon style={{ fontSize: 50, color: "#f99e29" }} />
+                                <GitHubIcon className='iconeGithub' />
                             </a>
                             <a href="https://www.linkedin.com/in/talita-ribeiro-b5a105186/" target="_blank">
-                                <LinkedInIcon style={{ fontSize: 60, color: "#f99e29" }} />
+                                <LinkedInIcon className='iconeLinkedin' />
                             </a>
                         </Box>
                     </Box>
                     
                     <Box>
                         <Box>
-                        <img className='box-fotos' src="https://i.imgur.com/eqEohka.png" alt="Dev Thaís" />
+                        <img className='box-fotos' src="https://i.imgur.com/LKzPPf9.jpg" alt="Dev Thaís" />
                         </Box>
 
                         <Box >
@@ -204,10 +206,10 @@ function SobreNos() {
                         <Box display="flex" alignItems="center" justifyContent="center" className='box-icones'>
 
                             <a href=" https://github.com/tholivera" target="_blank">
-                                <GitHubIcon style={{ fontSize: 50, color: "#f99e29" }} />
+                                <GitHubIcon className='iconeGithub' />
                             </a>
                             <a href=" https://www.linkedin.com/in/thais-oliveira-2341a0147/" target="_blank">
-                                <LinkedInIcon style={{ fontSize: 60, color: "#f99e29" }} />
+                                <LinkedInIcon className='iconeLinkedin' />
                             </a>
                         </Box>
                     </Box>                    

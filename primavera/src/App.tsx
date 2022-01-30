@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Navbar from './components/estaticos/navbar/Navbar';
+import Footer from './components/estaticos/footer/Footer';
 import Login from './pages/login/Login';
 import Home from './pages/home/Home';
 import CadastroUsuario from './pages/cadastroUsuaria/CadastroUsuario';
@@ -26,6 +27,7 @@ function App() {
         <ToastContainer />
         <Router>
           <Navbar />
+          
           <Switch >
 
             <Route exact path='/'>
@@ -83,7 +85,7 @@ function App() {
             </Route>
 
           </Switch>
-
+          <Footer />
         </Router >
       </Provider>
     </>

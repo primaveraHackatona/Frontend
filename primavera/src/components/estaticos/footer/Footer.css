@@ -1,0 +1,22 @@
+.box1{
+    background-color:#ffd6f1;
+    height: 30px;
+    align-items: center !important;
+    padding: 3px;
+}
+
+.box2{
+    background-color:#F26B9C;
+    height: 60px;
+}
+
+.redes{
+    font-size: 30px !important;
+    color: white;
+    margin: 0px 20px 0px 0px;
+}
+
+.textos{
+    color:white !important;
+    
+}

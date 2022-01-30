@@ -1,10 +1,27 @@
 import { Box, Text, TextField, Image, Button } from '@skynexui/components';
 import React from 'react';
 import appConfig from '../config.json';
+import axios from 'axios';
+
+/*export const api = axios.create({
+    baseURL: 'https://apiprimavera.herokuapp.com/'
+})*/
 
 export default function ChatPage() {
     const [mensagem, setMensagem] = React.useState('');
     const [listaDeMensagens, setListaDeMensagens] = React.useState([]);
+
+
+    /*React.useEffect(() => {
+        api
+          .from('mensagens')
+          .select('*')
+          .order('id', { ascending: false })
+          .then(({ data }) => {
+            console.log('Dados da consulta:', data);
+            setListaDeMensagens(data);
+          });
+      }, []);*/
 
     function handleNovaMensagem(novaMensagem) {
         const mensagem = {
@@ -12,6 +29,20 @@ export default function ChatPage() {
             de: 'Me',
             texto: novaMensagem,
         };
+
+        /*api
+        .from('mensagens')
+        .insert([
+          // Tem que ser um objeto com os MESMOS CAMPOS que você escreveu no supabase
+          mensagem
+        ])
+        .then(({ data }) => {
+          console.log('Criando mensagem: ', data);
+          setListaDeMensagens([
+            data[0],
+            ...listaDeMensagens,
+          ]);
+        });*/
 
         setListaDeMensagens([
             mensagem,
