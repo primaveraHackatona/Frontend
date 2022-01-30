@@ -1,35 +1,29 @@
     .text-decorator-none {
-        text-decoration: none;
-        color: white;
+        text-decoration: none !important;
+        color: white !important;
     }
     
     .alinhamento {
         align-items: center;
     }
     
-    .cursor {
-        cursor: pointer;
-    }
-    
     .logo {
         border-radius: 50%;
         height: 40px;
     }
-    .cursor{
-        cursor: pointer;
-        color: white;
+    
+    .cursor {
+        cursor: pointer !important;
+        color: white !important;
     }
     
-    .text-decorator-none{
-        text-decoration: none;
-       
-    }
-    .btn-cadastre-se{
+    .btn-cadastre-se {
         text-decoration: none!important;
         border-color: #fafafa!important;
         background: #fafafa!important;
         color: #F26B9C!important;
     }
+    
     .avatar {
         width: 35px!important;
         height: 35px!important;

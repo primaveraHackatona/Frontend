@@ -7,7 +7,7 @@
 
 .btnCancelar {
     border-color: white !important;
-    background-color: #A6A6A6!important;
+    background-color: #8CC2BD!important;
     color: white !important;
     margin-left: 4px !important;
 }
@@ -16,4 +16,12 @@
     color: #A6A6A6;
     font-weight: bold !important;
     text-align: center !important;
+}
+
+.transitionSize {
+    transition: transform 0.5s;
+}
+
+.transitionSize:hover {
+    transform: scale(1.1);
 }

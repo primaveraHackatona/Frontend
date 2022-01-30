@@ -112,21 +112,21 @@ function CadastroUsuario() {
 
                                     <Box my={2} display='flex' justifyContent='center' >
                                         <Link to='/home' className='text-decorator-none'>
-                                            <Button variant='contained' className='btnCancelar'>
+                                            <Button variant='contained' className='btnCancelar transitionSize'>
                                                 Cancelar
                                             </Button>
                                         </Link>
-                                        <Button type='submit' variant='contained' className='btnCadastro'>
+                                        <Button type='submit' variant='contained' className='btnCadastro transitionSize'>
                                             Cadastrar
                                         </Button>
                                     </Box>
                                 </form>
                                 <Box display='flex' justifyContent='center' marginTop={2}>
                                     <Box marginRight={1}>
-                                        <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
+                                        <Typography variant='subtitle1' gutterBottom align='center'>Já possui uma conta?</Typography>
                                     </Box>
                                     <Link to='/cadastrar' className='text-decorator-none'>
-                                        <Typography variant="subtitle1" gutterBottom align='center' className='txt' >Cadastre-se</Typography>
+                                        <Typography variant="subtitle1" gutterBottom align='center' className='txt' >Logue-se</Typography>
                                     </Link>
                                 </Box>
                             </Box>
