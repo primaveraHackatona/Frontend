@@ -99,7 +99,7 @@ function SobreNos() {
                     <Grid item xs={6} >
                         <Box paddingBottom={7} >
                             <Typography variant='h3' component='h3' align='center' className='box-texto'>
-                                Quem fez a primavera?
+                                Quem fez a Primavera?
                             </Typography>
                         </Box>
                     </Grid>
@@ -138,7 +138,7 @@ function SobreNos() {
 
                     <Box >
                                 <Typography variant='h5' component='h5' align='center'>
-                                    Maria Carolina S. N. Xavier
+                                    Maria Xavier
                                 </Typography>
                                 <Typography align='center'>
                                     Desenvolvedor Full Stack 

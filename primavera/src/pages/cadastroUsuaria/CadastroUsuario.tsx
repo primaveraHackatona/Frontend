@@ -125,7 +125,7 @@ function CadastroUsuario() {
                                     <Box marginRight={1}>
                                         <Typography variant='subtitle1' gutterBottom align='center'>Já possui uma conta?</Typography>
                                     </Box>
-                                    <Link to='/cadastrar' className='text-decorator-none'>
+                                    <Link to='/login' className='text-decorator-none'>
                                         <Typography variant="subtitle1" gutterBottom align='center' className='txt' >Logue-se</Typography>
                                     </Link>
                                 </Box>
