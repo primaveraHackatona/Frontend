@@ -73,7 +73,7 @@ function ListaPostagem() {
   return (
     <>
       <Container maxWidth="md">
-        <Box paddingTop={7} >
+        <Box>
           {
             arrPost.map(post => (
               <Box m={2}  >
@@ -82,7 +82,7 @@ function ListaPostagem() {
                     <CardContent>
                       <Box display='flex'>
                         <Box>
-                          <Avatar alt="Foto de perfil" src={foto} className='avatar' />
+                          <Avatar alt="Foto de perfil" src={post.usuario?.foto} className='avatar' />
                         </Box>
                         <Box paddingTop='4px' paddingLeft={2}>
                           <Typography variant="h6" component="h6" className='espaco-letras fonte-titulos'>
@@ -93,7 +93,7 @@ function ListaPostagem() {
                       <Typography variant="h6" component="h6" className='fonte-titulos'>
                         {post.titulo}
                       </Typography>
-                      
+
                       <Box paddingTop={1}>
                         <Typography className='fonte-texto espaco-letras' component="p">
                           {post.texto}
@@ -107,15 +107,15 @@ function ListaPostagem() {
                       </Typography>
                       <Box paddingTop={1}>
                         <Typography className='espaco-letras fonte-contato'>
-                          Quer falar comigo? Clique no botão :)
+                          Quer falar comigo? Clique no botão 
                         </Typography>
                       </Box>
-                      <Box className='text-decorator-none'>
-                      <Link to={'/chat'}>
-                        <Button variant='contained' className='btn-atualizar-post' >
-                          Chat
-                        </Button>
-                      </Link>
+                      <Box  paddingTop={1}>
+                        <Link to={'/chat'} className='text-decorator-none'>
+                          <Button variant='contained' className='btn-atualizar-post' >
+                            Chat
+                          </Button>
+                        </Link>
                       </Box>
                     </CardContent>
                   </Box>

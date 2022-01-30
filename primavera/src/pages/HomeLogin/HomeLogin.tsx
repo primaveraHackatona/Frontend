@@ -71,9 +71,9 @@ function HomeLogin() {
     return (
         <>
             <Grid container flex-direction="column" justifyContent="center" alignItems="center" className='bg-home-login'>
-                <Box className='alinharCards' paddingTop={5}>
+                <Box className='alinharCards' >
                     <Grid alignItems="center" item xs={4}>
-                        <Box className='box cardEstilo' paddingTop={7} paddingLeft={8} m={2}>
+                        <Box className='box cardEstilo' paddingLeft={8} m={2}>
                             <Card >
                                 <CardContent className='box' >
                                     <img src={fotoPerfil} className='fotoPerfil' />

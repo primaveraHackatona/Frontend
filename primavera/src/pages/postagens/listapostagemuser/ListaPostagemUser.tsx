@@ -77,7 +77,7 @@ function ListaPostagemUser() {
                                             <CardContent>
                                                 <Box display='flex'>
                                                     <Box>
-                                                        <Avatar alt="Foto de perfil" src={foto} className='avatar' />
+                                                        <Avatar alt="Foto de perfil" src={post.usuario?.foto} className='avatar' />
                                                     </Box>
                                                     <Box paddingTop='4px' paddingLeft={2}>
                                                         <Typography variant="h6" component="h6" className='espaco-letras fonte-titulos'>
