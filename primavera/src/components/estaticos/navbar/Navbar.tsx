@@ -65,7 +65,28 @@ function Navbar() {
                         {cadastrarTema}
                     </Box>
                 </Box>
-                <Box display='flex' paddingRight={5}>
+                <Box display="flex"  paddingRight={2}>
+                    <Box mx={1} paddingTop={1} className='cursor text-decorator-none' >
+                        <Link to='/homelogin' className='text-decorator-none'>
+                            <Typography className='text-decorator-none'>
+                                MUTIRÃO DA SAÚDE
+                            </Typography>
+                        </Link>
+                    </Box>
+                    <Box mx={1} paddingTop={1} className='cursor text-decorator-none' >
+                        <Link to='/homelogin' className='text-decorator-none'>
+                            <Typography className='text-decorator-none'>
+                                GINECOLOGIA
+                            </Typography>
+                        </Link>
+                    </Box>
+                    <Box mx={1} paddingTop={1} className='cursor text-decorator-none' >
+                        <Link to='/homelogin' className='text-decorator-none'>
+                            <Typography className='text-decorator-none'>
+                                CARDIOLOGIA
+                            </Typography>
+                        </Link>
+                    </Box>
                     <Box mx={1} paddingTop={1} className='cursor' onClick={goLogout}>
                         <Typography>
                             SAIR
